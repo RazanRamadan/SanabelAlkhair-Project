@@ -1,0 +1,19 @@
+body, html {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.main-container {
+  display: flex;
+}
+
+.content {
+  flex: 1;
+}
+
+.main-content {
+  margin-left: 240px; /* تعويض عرض الشريط الجانبي */
+  padding: 20px; /* مسافة داخلية لراحة القراءة */
+  margin-top: 60px; /* تعويض ارتفاع الشريط العلوي */
+}

@@ -1,0 +1,81 @@
+/* Sidebar styling */
+.volunteer-info-container {
+    display: flex;
+    font-family: Arial, sans-serif;
+  }
+  
+  .sidebar {
+    background-color: #d9eac7;
+    width: 250px;
+    height: 100vh;
+    padding: 20px;
+    box-sizing: border-box;
+  }
+  
+  .sidebar h2 {
+    color: #456b3f;
+  }
+  
+  .sidebar ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .sidebar li {
+    padding: 10px 0;
+    color: #333;
+    cursor: pointer;
+  }
+  
+  .sidebar .active {
+    font-weight: bold;
+    color: #fff;
+    background-color: #8c9c87;
+    padding-left: 10px;
+  }
+  
+  /* Content styling */
+  .volunteer-content {
+    padding: 40px;
+    flex-grow: 1;
+  }
+  
+  .volunteer-content h1 {
+    margin-bottom: 20px;
+    color: #333;
+  }
+  
+  .info-form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  
+  .form-row {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+  }
+  
+  .form-row label {
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+  
+  .form-row input {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .profile-pic {
+    width: 80px;
+    height: 80px;
+    background-color: #ddd;
+    border-radius: 50%;
+  }
+  
+
+
+
+

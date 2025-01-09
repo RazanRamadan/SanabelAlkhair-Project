@@ -1,0 +1,27 @@
+.table-container {
+    padding: 20px;
+  }
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  th, td {
+    padding: 10px;
+    border: 1px solid #ddd;
+    text-align: center;
+  }
+  
+  th {
+    background-color: #f9f9f9;
+  }
+  
+  .show-button {
+    padding: 5px 10px;
+    background-color: #c5e1a5;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  

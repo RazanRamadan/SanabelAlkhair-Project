@@ -1,0 +1,28 @@
+.topbar {
+  background-color: #f1f8e9; /* لون أخضر فاتح */
+  color: #444;
+  padding: 10px 20px;
+  font-size: 18px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  top: 0; /* أعلى الصفحة */
+  left: 240px; /* ترك مسافة تعويض عرض الشريط الجانبي */
+  right: 0;
+  z-index: 999; /* تحت الشريط الجانبي */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.search-bar {
+  width: 50%;
+  padding: 5px 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.user-info {
+  font-size: 16px;
+  font-weight: bold;
+}

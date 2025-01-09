@@ -1,0 +1,120 @@
+.sidebar {
+  width: 240px;
+  background-color: #f1f8e9; /* لون أخضر فاتح */
+  color: #444;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  padding: 20px 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000; /* فوق الشريط العلوي */
+}
+
+.sidebar .logo {
+  text-align: center;
+  font-size: 24px;
+  color: #558b2f;
+  margin-bottom: 30px;
+}
+
+.menu {
+  list-style: none;
+  padding: 0;
+  flex: 1;
+}
+
+.menu li {
+  margin: 10px 20px;
+}
+
+/* تنسيق موحّد لجميع الأزرار الرئيسية */
+.menu-button {
+  background: none;
+  border: none;
+  color: #1b5e20; /* أخضر غامق */
+  font-size: 16px;
+  text-align: left;
+  cursor: pointer;
+  transition: color 0.3s ease, font-weight 0.3s ease;
+  width: 100%;
+  padding: 10px 0;
+  text-decoration: none; /* إزالة الخط أسفل النص */
+}
+
+/* إزالة أي تنسيقات افتراضية على الروابط */
+.menu-button a {
+  text-decoration: none; /* إزالة الخط تحت النص */
+  color: inherit; /* استخدام نفس لون الزر */
+}
+
+.menu-button:hover {
+  color: #2e7d32;
+  font-weight: bold;
+}
+
+/* إزالة الخط الذي يظهر عند التركيز */
+.menu-button:focus {
+  outline: none;
+}
+
+/* القائمة الفرعية */
+.submenu-items {
+  list-style: none;
+  padding: 10px; /* مسافات داخلية لتحسين الجمالية */
+  margin: 10px 0;
+  background-color: #f9f9f9; /* خلفية فاتحة */
+  border-radius: 8px; /* زوايا مستديرة */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* ظل خفيف */
+}
+
+.submenu-items li {
+  margin: 5px 0;
+  text-align: left;
+}
+
+.submenu-button {
+  background: none;
+  border: none;
+  color: #1b5e20; /* نفس لون الأزرار الأساسية */
+  font-size: 14px;
+  text-align: left;
+  cursor: pointer;
+  transition: color 0.3s ease, font-weight 0.3s ease;
+  width: 100%;
+  padding: 8px; /* مسافة داخلية */
+}
+
+.submenu-button a {
+  text-decoration: none; /* إزالة الخط تحت النص */
+  color: inherit; /* استخدام نفس لون الزر */
+}
+
+.submenu-button:hover {
+  color: #2e7d32;
+  font-weight: bold;
+}
+
+/* زر Log Out */
+.logout {
+  margin-top: auto;
+  padding: 10px 20px;
+}
+
+.logout-button {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: #f9f9f9;
+  color: #444;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.logout-button:hover {
+  background-color: #e0f2f1;
+  border-color: #a5d6a7;
+}

@@ -1,0 +1,52 @@
+.table-container {
+  padding: 20px;
+}
+
+.add-new-button-container {
+  display: flex;
+  justify-content: flex-end; /* جعل الزر في الجهة اليمنى */
+  margin-bottom: 10px; /* مسافة بين الزر والجدول */
+}
+
+.add-new-button {
+  padding: 10px 20px;
+  background-color: #4caf50; /* لون الزر */
+  color: white; /* لون النص */
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.add-new-button:hover {
+  background-color: #45a049; /* تأثير عند تمرير المؤشر */
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th, td {
+  padding: 10px;
+  border: 1px solid #ddd;
+  text-align: center;
+}
+
+th {
+  background-color: #f9f9f9;
+}
+
+.edit-button {
+  padding: 5px 10px;
+  background-color: #ffcc80; /* لون جديد مميز للزر */
+  color: #000; /* لون النص */
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.edit-button:hover {
+  background-color: #ffa726; /* تأثير عند تمرير المؤشر */
+}

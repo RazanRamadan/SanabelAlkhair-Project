@@ -1,0 +1,80 @@
+.donations-info-container {
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+h1 {
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.add-donation-button-container {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 20px;
+}
+
+.add-donation-button {
+  padding: 10px 20px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.add-donation-button:hover {
+  background-color: #45a049;
+}
+
+.donations-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+  margin: 0 auto;
+}
+
+.donations-table th,
+.donations-table td {
+  padding: 10px;
+  border: 1px solid #ccc;
+}
+
+.donations-table th {
+  background-color: #f4f4f4;
+  font-weight: bold;
+}
+
+.donations-table td {
+  vertical-align: middle;
+}
+
+/* تنسيق الحالات مع خط تحت النص */
+.state-under-processing {
+  color: orange;
+  text-decoration: underline;
+}
+
+.state-published {
+  color: blue;
+  text-decoration: underline;
+}
+
+.state-completed {
+  color: green;
+  text-decoration: underline;
+}
+
+.show-button {
+  padding: 5px 10px;
+  background-color: #d9eac7;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.show-button:hover {
+  background-color: #c3d9a6;
+}

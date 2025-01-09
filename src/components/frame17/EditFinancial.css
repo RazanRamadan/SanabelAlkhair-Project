@@ -1,0 +1,107 @@
+.edit-financial-container {
+    padding: 20px;
+    font-family: Arial, sans-serif;
+}
+
+h1 {
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.fieldset {
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    padding: 15px;
+    border-radius: 5px;
+}
+
+.legend {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.edit-financial-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.form-row {
+    display: flex;
+    gap: 20px;
+}
+
+.form-field {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.form-field label {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.form-field input,
+.form-field select,
+.form-field textarea {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+textarea {
+    resize: vertical;
+    height: 100px;
+}
+
+.form-description textarea {
+    height: 150px;
+}
+
+.photo-section {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.photo-box {
+    width: 100px;
+    height: 100px;
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.photo-buttons button {
+    padding: 5px 10px;
+    margin: 5px 0;
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.photo-buttons button:hover {
+    background-color: #45a049;
+}
+
+.form-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+}
+
+.form-actions button {
+    padding: 10px 20px;
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.form-actions button:hover {
+    background-color: #45a049;
+}

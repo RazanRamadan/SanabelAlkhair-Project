@@ -1,0 +1,59 @@
+.requests-information-container {
+    padding: 20px;
+    font-family: Arial, sans-serif;
+  }
+  
+  h1 {
+    margin-bottom: 20px;
+    color: #333;
+  }
+  
+  .requests-table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+  }
+  
+  .requests-table th,
+  .requests-table td {
+    padding: 10px;
+    border: 1px solid #ccc;
+  }
+  
+  .requests-table th {
+    background-color: #f4f4f4;
+    font-weight: bold;
+  }
+  
+  .requests-table td {
+    vertical-align: middle;
+  }
+  
+  /* تنسيق الحالات مع خط تحت النص */
+  .state-pending {
+    color: orange;
+    text-decoration: underline; /* خط تحت النص */
+  }
+  
+  .state-accepted {
+    color: green;
+    text-decoration: underline; /* خط تحت النص */
+  }
+  
+  .state-rejected {
+    color: red;
+    text-decoration: underline; /* خط تحت النص */
+  }
+  
+  .show-button {
+    padding: 5px 10px;
+    background-color: #d9eac7;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .show-button:hover {
+    background-color: #c3d9a6;
+  }
+  

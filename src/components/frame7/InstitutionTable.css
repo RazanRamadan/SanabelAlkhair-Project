@@ -1,0 +1,74 @@
+/* حاوية الجدول */
+.institution-table-container {
+    margin: 20px;
+    font-family: Arial, sans-serif;
+  }
+  
+  /* عنوان الجدول وزر Add New */
+  .table-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  
+  .table-header h2 {
+    margin: 0;
+    font-size: 1.5rem;
+    color: #333;
+  }
+  
+  .add-new-button {
+    text-decoration: none;
+    background-color: #4caf50;
+    color: white;
+    padding: 8px 12px;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+  }
+  
+  .add-new-button:hover {
+    background-color: #45a049;
+  }
+  
+  /* تصميم الجدول */
+  .institution-table {
+    width: 100%;
+    border-collapse: collapse;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .institution-table th,
+  .institution-table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center;
+  }
+  
+  .institution-table th {
+    background-color: #f4f4f4;
+    color: #333;
+    font-weight: bold;
+  }
+  
+  .institution-table tr:nth-child(even) {
+    background-color: #f9f9f9;
+  }
+  
+  .institution-table tr:hover {
+    background-color: #f1f1f1;
+  }
+  
+  /* زر Edit */
+  .edit-button {
+    text-decoration: none;
+    color: #007bff;
+    font-weight: bold;
+    transition: color 0.3s ease;
+  }
+  
+  .edit-button:hover {
+    color: #0056b3;
+  }
+  
