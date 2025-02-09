@@ -1,25 +1,48 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import "./Login.css";
 
 const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
+  const navigate = useNavigate();
 
-  const handleLogin = (e) => {
+  const handleLogin = async (e) => {
     e.preventDefault();
 
-    // تحقق من صحة البيانات (يمكن تطويرها حسب الحاجة)
     if (!email || !password) {
       setError("Please enter both email and password.");
       return;
     }
 
-    // إرسال بيانات تسجيل الدخول
-    console.log("Logging in with:", { email, password });
-    setError(""); // مسح الأخطاء
+    try {
+      const response = await fetch("http://127.0.0.1:8000/employee1/login", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          Name: email,
+          password: password,
+        }),
+      });
 
-    // يمكن إضافة طلب API هنا للتحقق من تسجيل الدخول
+      if (!response.ok) {
+        const errorData = await response.json();
+        throw new Error(errorData.message || "Login failed");
+      }
+
+      const data = await response.json();
+      console.log("Login successful:", data);
+
+      // تخزين التوكن في localStorage
+      localStorage.setItem("token", data.token);
+      setError(""); // مسح الأخطاء
+      navigate("/dashboard"); // توجيه المستخدم بعد تسجيل الدخول
+    } catch (err) {
+      setError(err.message);
+    }
   };
 
   return (
@@ -28,13 +51,13 @@ const Login = () => {
       <form className="login-form" onSubmit={handleLogin}>
         {error && <div className="login-error">{error}</div>}
         <div className="form-group">
-          <label htmlFor="email">Email:</label>
+          <label htmlFor="email">Name:</label>
           <input
-            type="email"
+            type="text"
             id="email"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
-            placeholder="Enter your email"
+            placeholder="Enter your name"
           />
         </div>
         <div className="form-group">

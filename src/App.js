@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route, Navigate } from "react-router-dom";
 
 // استيراد المكونات المختلفة
 import Sidebar from "./components/frame1/Sidebar";
@@ -18,52 +18,51 @@ import EditRequest from "./components/frame12/EditRequest";
 import DonationsInfo from "./components/frame13/DonationsInfo";
 import EditDonation from "./components/frame14/EditDonation";
 import AddDonation from "./components/frame15/AddDonation";
-import FinancialInfo from "./components/frame16/FinancialInfo"; // استيراد FinancialInfo
-import EditFinanciaI from "./components/frame17/EditFinanciaI"; // استيراد EditFinanciaI
-import AddNewFinanciaI from "./components/frame18/AddNewFinanciaI"; // استيراد AddNewFinanciaI
+import FinancialInfo from "./components/frame16/FinancialInfo";
+import EditFinanciaI from "./components/frame17/EditFinanciaI";
+import AddNewFinanciaI from "./components/frame18/AddNewFinanciaI";
+import Login from "./components/frame10/Login";
 
 import "./App.css";
 
 function App() {
+  const isAuthenticated = !!localStorage.getItem("token");
+
   return (
     <Router>
       <div className="main-container">
-        <Sidebar />
+        {isAuthenticated && <Sidebar />}
         <div className="content">
-          <Topbar />
+          {isAuthenticated && <Topbar />}
           <div className="main-content">
             <Routes>
-              {/* المسار الافتراضي يعرض Dashboard */}
-              <Route path="/" element={<Dashboard />} />
-              <Route path="/dashboard" element={<Dashboard />} />
-
-              {/* مسارات المتطوعين */}
-              <Route path="/volunteers" element={<VolunteersTable />} />
-              <Route path="/volunteer-info" element={<VolunteerInfo />} />
-
-              {/* مسارات المستفيدين */}
-              <Route path="/indigent" element={<IndigentsTable />} />
-              <Route path="/add-indigent" element={<AddIndigents />} />
-              <Route path="/edit-indigent/:id" element={<EditIndigents />} />
-
-              {/* مسارات المؤسسات */}
-              <Route path="/institutions" element={<InstitutionTable />} />
-              <Route path="/add-institution" element={<AddInstitution />} />
-              <Route path="/edit-institution/:id" element={<EditInstitution />} />
-
-              {/* مسارات الطلبات */}
-              <Route path="/requests" element={<RequestsInformation />} />
-              <Route path="/edit-request" element={<EditRequest />} />
-
-              {/* مسارات التبرعات */}
-              <Route path="/donations" element={<DonationsInfo />} />
-              <Route path="/edit-donation" element={<EditDonation />} />
-              <Route path="/add-donation" element={<AddDonation />} />
-
-              {/* مسارات المعلومات المالية */}
-              <Route path="/financial" element={<FinancialInfo />} />
-              <Route path="/edit-financial" element={<EditFinanciaI />} />
-              <Route path="/add-financial" element={<AddNewFinanciaI />} />
+              {/* واجهة تسجيل الدخول */}
+              <Route path="/login" element={<Login />} />
+              {/* حماية المسارات */}
+              {isAuthenticated ? (
+                <>
+                  <Route path="/" element={<Dashboard />} />
+                  <Route path="/dashboard" element={<Dashboard />} />
+                  <Route path="/volunteers" element={<VolunteersTable />} />
+                  <Route path="/volunteer-info" element={<VolunteerInfo />} />
+                  <Route path="/indigent" element={<IndigentsTable />} />
+                  <Route path="/add-indigent" element={<AddIndigents />} />
+                  <Route path="/edit-indigent/:id" element={<EditIndigents />} />
+                  <Route path="/institutions" element={<InstitutionTable />} />
+                  <Route path="/add-institution" element={<AddInstitution />} />
+                  <Route path="/edit-institution/:id" element={<EditInstitution />} />
+                  <Route path="/requests" element={<RequestsInformation />} />
+                  <Route path="/edit-request" element={<EditRequest />} />
+                  <Route path="/donations" element={<DonationsInfo />} />
+                  <Route path="/edit-donation" element={<EditDonation />} />
+                  <Route path="/add-donation" element={<AddDonation />} />
+                  <Route path="/financial" element={<FinancialInfo />} />
+                  <Route path="/edit-financial" element={<EditFinanciaI />} />
+                  <Route path="/add-financial" element={<AddNewFinanciaI />} />
+                </>
+              ) : (
+                <Route path="*" element={<Navigate to="/login" />} />
+              )}
             </Routes>
           </div>
         </div>
